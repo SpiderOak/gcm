@@ -20,3 +20,7 @@ type Message struct {
 func NewMessage(data map[string]interface{}, regIDs ...string) *Message {
 	return &Message{RegistrationIDs: regIDs, Data: data}
 }
+
+func NewNotificationMessage(notification map[string]interface{}, regIDs ...string) *Message {
+	return &Message{RegistrationIDs: regIDs, Notification: notification}
+}
